@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+   <symbol id="icon-settings-full-screen" viewBox="0 0 20 20" fill="none">
+      <path d="M3 3V7L4.71429 5.28571L6.42857 7L7 6.42857L5.28571 4.71429L7 3H3Z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M13 3L14.7143 4.71429L13 6.42857L13.5714 7L15.2857 5.28571L17 7V3H13Z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M6.42857 13L4.71429 14.7143L3 13V17H7L5.28571 15.2857L7 13.5714L6.42857 13Z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M13.5714 13L13 13.5714L14.7143 15.2857L13 17H17V13L15.2857 14.7143L13.5714 13Z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+   </symbol>
+</svg>

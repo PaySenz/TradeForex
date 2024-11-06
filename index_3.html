@@ -1,0 +1,912 @@
+<!DOCTYPE html> <html lang=en class=black style=--vh:10.040000000000001px><!--
+ Page saved with SingleFile 
+ url: https://qxbroker.com/en/demo-trade 
+ saved date: Sat Oct 26 2024 00:38:06 GMT+0600 (Bangladesh Standard Time)
+--><meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<meta http-equiv=X-UA-Compatible content="ie=edge">
+<title>Quotex demo account | QxBroker demo</title>
+<meta name=description content="The official website for the demo version of Quotex. Come in, get 10 000 USD on your demo account Qx broker and learn how to trade. Join!">
+<meta name=msapplication-TileColor content=#a0002a>
+<meta name=msapplication-config content=https://qxbroker.com/profile/favicons/browserconfig.xml>
+<meta name=theme-color content=#ffffff>
+<meta name=interkassa-verification content=52ae35204ccc1b97dfc591cb53ca5d3a>
+<link rel="stylesheet" href="assets/css/style1.css">
+<link rel="stylesheet" href="assets/css/style2.css">
+<link rel="stylesheet" href="assets/css/style8.css">
+<link rel="stylesheet" href="assets/css/AssetSelect.scss">
+<link rel="stylesheet" href="assets/css/AssetsTable.scss">
+<link rel="stylesheet" href="assets/css/TradingChart.scss">
+<link rel="stylesheet" href="assets/account.css">
+<link rel="stylesheet" href="assets/analytics.css">
+<!-- <link rel="stylesheet" href="assets/app.css"> -->
+<link rel="stylesheet" href="assets/chart.css">
+<link rel="stylesheet" href="assets/css.css">
+<link rel="stylesheet" href="assets/css2.css">
+<link rel="stylesheet" href="assets/custom.css">
+<link rel="stylesheet" href="assets/debug-bar-decorator.css">
+<link rel="stylesheet" href="assets/index.scss">
+<link rel="stylesheet" href="assets/market.css">
+<link rel="stylesheet" href="assets/pendingTrades.css">
+<link rel="stylesheet" href="assets/tournament.css">
+<link rel="stylesheet" href="assets/tournamentDetail.css">
+<link rel="stylesheet" href="assets/trades.css">
+<link rel="stylesheet" href="assets/transactions.css">
+<link rel="stylesheet" href="assets/vendor.css">
+<script src=""></script>
+<style>
+   .hidden {
+    display: none;
+}
+.chart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+</style>
+<style>
+        body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #FFFFFF;
+            margin: 0;
+        }
+        #currency-chart {
+            width: 80vw;
+            height: 80vh;
+            position: relative;
+        }
+        #currency-chart-id {
+            width: 100%;
+            height: 500px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .status-message {
+            text-align: center;
+            font-size: 1rem;
+            color: gray;
+            padding: 10px;
+        }
+    </style>
+
+<meta name=referrer content=no-referrer>
+
+<style>.sf-hidden{display:none!important}</style>
+
+</head>
+
+<body class=loading>
+    <div id=root>
+        <div class="app app--fixed animate app--sidebar_name-open">
+            <aside class="sidebar app__sidebar">
+                <div>
+                   <svg class="icon-burger-dark sidebar__toggle">
+                      <symbol fill=none id=icon-burger-dark viewBox="0 0 20 16">
+                         <rect width=20 height=1.5 fill=#FFFFFF></rect>
+                         <rect y=7 width=15 height=1.5 fill=#FFFFFF></rect>
+                         <rect y=14 width=20 height=1.5 fill=#FFFFFF></rect>
+                      </symbol>
+                      <use xlink:href=#icon-burger-dark></use>
+                   </svg>
+                </div>
+                <!-- Ensure icons.svg is accessible in the specified path -->
+                <object type="image/svg+xml" data="assets/icons.svg" style="display: none;"></object>
+
+                <nav class="sidebar__buttons">
+                
+                   <a data-text="Trade" class="sidebar__button open-name" href="https://qxbroker.com/en/trade">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-trade-sidebar">
+                            <use xlink:href="assets/icons.svg#icon-trade-sidebar"></use>
+                         </svg>
+                         <span>Trade</span>
+                      </div>
+                   </a>
+                
+                   <button class="sidebar__button open-name" data-text="Support">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-help">
+                            <use xlink:href="assets/icons.svg#icon-help"></use>
+                         </svg>
+                         <span>Support</span>
+                      </div>
+                   </button>
+                
+                   <a data-text="Account" class="sidebar__button open-name" href="https://qxbroker.com/en/settings">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-profile">
+                            <use xlink:href="assets/icons.svg#icon-profile"></use>
+                         </svg>
+                         <span>Account</span>
+                      </div>
+                   </a>
+                
+                   <a data-text="Tournaments" class="sidebar__button open-name" href="https://qxbroker.com/en/tournaments">
+                      <div class="sidebar__button-icon">
+                         <div class="sidebar__button-icon-tournament">4</div>
+                         <svg class="icon-tournaments">
+                            <use xlink:href="assets/icons.svg#icon-tournaments"></use>
+                         </svg>
+                         <span>Tournaments</span>
+                      </div>
+                   </a>
+                
+                   <a data-text="Market" class="sidebar__button open-name" href="https://qxbroker.com/en/market">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-market">
+                            <use xlink:href="assets/icons.svg#icon-market"></use>
+                         </svg>
+                         <span>Market</span>
+                      </div>
+                   </a>
+                
+                   <button class="sidebar__button open-name" data-text="More">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-more-sidebar">
+                            <use xlink:href="assets/icons.svg#icon-more-sidebar"></use>
+                         </svg>
+                         <span>More</span>
+                      </div>
+                   </button>
+                
+                </nav>
+                <div class="sidebar__usermenu sf-hidden"></div>
+                <div class="sidebar__footer sidebar__footer--closed">
+                  <div class="sidebar__settings-block">
+                     <!-- Fullscreen Settings Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-settings-full-screen">
+                           <use xlink:href="assets/fullscreen-icons.svg#icon-settings-full-screen"></use>
+                        </svg>
+                     </button>
+                     
+                     <!-- Sidebar Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-left-sidebar">
+                           <use xlink:href="assets/sidebar-icons.svg#icon-left-sidebar"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  
+                  <!-- Load Settings Icons SVG Sprite -->
+                  <object type="image/svg+xml" data="assets/settings-icons.svg" style="display: none;"></object>
+                  
+                  <div class="sidebar__settings">
+                     <!-- General Settings Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-settings">
+                           <use xlink:href="assets/settings-icons.svg#icon-settings"></use>
+                        </svg>
+                     </button>
+                     
+                     <!-- Sound Settings Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-settings-sound">
+                           <use xlink:href="assets/settings-icons.svg#icon-settings-sound"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  
+                  <!-- Load Social Media Icons SVG Sprite -->
+                  <object type="image/svg+xml" data="assets/social-icons.svg" style="display: none;"></object>
+                  
+                  <!-- Social Media Button -->
+                  <button class="sidebar__social-media">
+                     <svg width="28" height="28" viewBox="0 0 28 28" class="icon-social-media">
+                        <use xlink:href="assets/social-icons.svg#icon-social-media"></use>
+                     </svg>
+                     Join us
+                  </button>
+                  
+                  <div class="sidebar__livechat">
+                     <a class="sidebar__livechat-status online" href="https://qxbroker.com/en/support/create">Help</a>
+                  </div>
+               </div>
+                <div class="sidebar__footer sidebar__footer--open sf-hidden" dir=auto></div>
+             </aside>
+            <aside class="sidepanel app__sidepanel sidepanel__bg-black"></aside>
+
+<div class="page app__page">
+   <header class="header page__header">
+      <div class=header__brand>
+         <!-- HTML file linking to the external SVG -->
+         <!-- HTML file linking to the external SVG -->
+         <a class="header__logo" href="https://qxbroker.com/trade">
+            <svg class="icon-logo-dark">
+                  <use xlink:href="assets/icon-logo-dark.svg#icon-logo-dark"></use>
+            </svg>
+         </a>
+         <div class=header__slogan>Web Trading Platform</div>
+      </div>
+      <div class="header__mobile-menu sf-hidden"></div>
+      <div class=header__banner>
+         <img class=header__banner-bg src="assets/banner.png" alt="Banner bg">
+
+         <a class=header__banner-container href="https://qxbroker.com/en/deposit?code=WELCOME30">
+            <img class=header__banner-icon src="assets/rocket.png" alt="Banner icon">
+            <span>Get a 30% bonus on your first deposit</span>
+            <div class=header__banner-percents>30%</div>
+         </a>
+      </div>
+
+      <div class="trading-chart__mobile-select sf-hidden">
+         <svg class="icon-caret trading-chart__mobile-select__caret">
+            <symbol fill=none id=icon-caret viewBox="0 0 9 6">
+               <path d="M1.08341 0.679043C0.83589 0.440319 0.443217 0.440319 0.195695 0.679043C-0.0690109 0.93434 -0.063765 1.35935 0.20285 1.60115L4.05975 5.32096C4.18042 5.43734 4.34284 5.5 4.5036 5.5C4.6698 5.5 4.82584 5.43826 4.94746 5.32096L8.80436 1.60115C9.06521 1.34957 9.06521 0.930626 8.80436 0.679043C8.55684 0.440319 8.16416 0.440319 7.91664 0.679043L4.49668 3.97745L1.08341 0.679043Z" fill=currentColor></path>
+            </symbol>
+            <use xlink:href=#icon-caret></use>
+         </svg>
+      </div>
+      <div class="trading-chart__mobile__payout sf-hidden">Your payout: </div>
+      <div class="header-notifications header-notifications-mobile sf-hidden"></div>
+      <div class="usermenu usermenu-mobile sf-hidden"></div>
+      <div class="header__container">
+         <div class="header-notifications">
+            <div class="header-notifications__button">
+               <svg class="icon-notification header-notifications__icon">
+                  <use xlink:href="icons-header.svg#icon-notification"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="usermenu">
+            <div class="usermenu__info">
+               <div class="usermenu__info-levels">
+                  <svg class="icon-profile-level-standart">
+                     <use xlink:href="icons-header.svg#icon-profile-level-standart"></use>
+                  </svg>
+               </div>
+               <div class="usermenu__info-wrapper"></div>
+               <div class="usermenu__info-text">
+                  <div class="usermenu__info-name">Demo Account</div>
+                  <div class="usermenu__info-balance">$10,000.00</div>
+               </div>
+               <div class="usermenu__info-caret">
+                  <svg class="icon-caret">
+                     <use xlink:href="icons-header.svg#icon-caret"></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <div class="header__sidebar">
+            <a class="button button--success button--small header__sidebar-button deposit" href="https://qxbroker.com/en/deposit">
+               <div class="button__icon">
+                  <svg class="icon-plus">
+                     <use xlink:href="icons-header.svg#icon-plus"></use>
+                  </svg>
+               </div>
+               <span>Deposit</span>
+            </a>
+            <a class="button button--small header__sidebar-button hide-md-down" href="https://qxbroker.com/en/withdrawal">Withdrawal</a>
+         </div>
+      </div>
+   </header>
+   <main class=page__body>
+      <div class=page__content>
+         <div class="trading-chart trading-chart--fade-in">
+            <div class=trading-chart__wrapper>
+               <div class=chart>
+                  <div class="trading-chart__button-arrow">
+                     <svg class=icon-arrow-right>
+                        <symbol id=icon-arrow-right viewBox="0 0 20 20">
+                           <path d="M10.458 6.00259L10.1304 6.33015C10.0274 6.433 9.97041 6.57048 9.97041 6.71682C9.97041 6.86332 10.0274 7.01324 10.1304 7.11609L12.2356 9.23389H5.54724C5.24561 9.23389 5 9.45405 5 9.7556V10.2191C5 10.5206 5.24561 10.7964 5.54724 10.7964H12.2594L10.1304 12.91C10.0274 13.013 9.97041 13.1426 9.97041 13.2891C9.97041 13.4354 10.0274 13.5691 10.1304 13.672L10.458 13.9978C10.6713 14.211 11.0182 14.2101 11.2315 13.9969L14.8403 10.3876C14.9431 10.2849 15 10.147 15 9.99942V9.99788C15 9.85145 14.9431 9.71389 14.8403 9.61113L11.2315 6.00259C11.0184 5.78926 10.6713 5.78926 10.458 6.00259Z"></path>
+                        </symbol>
+                        <use xlink:href=#icon-arrow-right></use>
+                     </svg>
+                  </div>
+                  <!-- Charts -->
+                  <div class="tradingview-widget-container" id="currency-chart" style="cursor: default;">
+                     <canvas class="tradingview-widget-container__widget" width="100%" height="1308"></canvas>
+                  </div>
+               </div>
+            </div>
+            <div class="trading-chart__top">
+               <div class="trading-chart__assets">
+                  <div class="asset-select">
+                     <button id="toggleDropdownButton" class="asset-select__button">
+                        <svg class="icon-plus"><use xlink:href="assets/spritemap.svg#icon-plus"></use></svg>
+                     </button>
+                     <div id="dropdownContent" class="asset-select__dropdown hidden" style="left: 0px;">
+                        
+                     <div dir="auto" class="asset-select__dropdown-title">Select trade pair
+                        <div>
+                           <svg class="icon-close">
+                              <use xlink:href="assets/spritemap.svg#icon-close"></use>
+                           </svg>
+                        </div>
+                     </div>
+                     <div dir="auto" class="asset-select__search-filters active">
+                        <button class="asset-select__search-filter active">Currencies</button>
+                        <button class="asset-select__search-filter ">Crypto</button>
+                        <button class="asset-select__search-filter ">Commodities</button>
+                        <button class="asset-select__search-filter ">Stocks</button>
+                     </div>
+                     <div dir="" class="asset-select__block">
+                        <div class="asset-select__favorit  ">
+                           <svg class="icon-favorite-filled">
+                              <use xlink:href="assets/spritemap.svg#icon-favorite-filled"></use>
+                           </svg>
+                           <div>0</div>
+                        </div>
+                        <div class="asset-select__search">
+                           <div class="asset-select__search-button">
+                              <svg class="icon-search">
+                                 <use xlink:href="assets/spritemap.svg#icon-search"></use>
+                              </svg>
+                           </div>
+                           <input type="text" class="asset-select__search-input" placeholder="Search">
+                        </div>
+                     </div>
+                     <div class="asset-select__content-wrapper">
+                        <div class="asset-select__content">
+                            <div class="assets-table">
+                                <div class="assets-table__header">
+                                    <div class="assets-table__header-item" dir="">
+                                        <a>Name</a>
+                                    </div>
+                                    <div class="assets-table__header-item mobile-none" dir="">
+                                        <a>24h changing</a>
+                                    </div>
+                                    <div class="assets-table__header-item">
+                                        <a>Profit 1+ min</a>
+                                        <svg class="icon-sort-mark">
+                                            <use xlink:href="assets/spritemap.svg#icon-sort-mark"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__header-item">
+                                        <a>5+ min</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-aud">
+                                                <use xlink:href="assets/flags.svg#flag-aud"></use>
+                                            </svg>
+                                            <svg class="flag-usd">
+                                                <use xlink:href="assets/flags.svg#flag-usd"></use>
+                                            </svg>
+                                        </div>
+                                        <span>AUD/USD (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--down">
+                                        <svg class="icon-arrow-down">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-down"></use>
+                                        </svg>
+                                        <span>-1.49%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>93%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>93%</span>
+                                    </div>
+                                </div>
+                    
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-brl">
+                                                <use xlink:href="assets/flags.svg#flag-brl"></use>
+                                            </svg>
+                                            <svg class="flag-usd">
+                                                <use xlink:href="assets/flags.svg#flag-usd"></use>
+                                            </svg>
+                                        </div>
+                                        <span>USD/BRL (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--up">
+                                        <svg class="icon-arrow-up">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-up"></use>
+                                        </svg>
+                                        <span>0.06%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>93%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>93%</span>
+                                    </div>
+                                </div>
+                    
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-eur">
+                                                <use xlink:href="assets/flags.svg#flag-eur"></use>
+                                            </svg>
+                                            <svg class="flag-gbp">
+                                                <use xlink:href="assets/flags.svg#flag-gbp"></use>
+                                            </svg>
+                                        </div>
+                                        <span>EUR/GBP (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--up">
+                                        <svg class="icon-arrow-up">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-up"></use>
+                                        </svg>
+                                        <span>0.8%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>93%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>93%</span>
+                                    </div>
+                                </div>
+                    
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-gbp">
+                                                <use xlink:href="assets/flags.svg#flag-gbp"></use>
+                                            </svg>
+                                            <svg class="flag-aud">
+                                                <use xlink:href="assets/flags.svg#flag-aud"></use>
+                                            </svg>
+                                        </div>
+                                        <span>GBP/AUD (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--up">
+                                        <svg class="icon-arrow-up">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-up"></use>
+                                        </svg>
+                                        <span>0.31%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>93%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>93%</span>
+                                    </div>
+                                </div>
+                    
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-usd">
+                                                <use xlink:href="assets/flags.svg#flag-usd"></use>
+                                            </svg>
+                                            <svg class="flag-bdt">
+                                                <use xlink:href="assets/flags.svg#flag-bdt"></use>
+                                            </svg>
+                                        </div>
+                                        <span>USD/BDT (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--down">
+                                        <svg class="icon-arrow-down">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-down"></use>
+                                        </svg>
+                                        <span>-0.16%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>93%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>93%</span>
+                                    </div>
+                                </div>
+                    
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-usd">
+                                                <use xlink:href="assets/flags.svg#flag-usd"></use>
+                                            </svg>
+                                            <svg class="flag-dzd">
+                                                <use xlink:href="assets/flags.svg#flag-dzd"></use>
+                                            </svg>
+                                        </div>
+                                        <span>USD/DZD (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--up">
+                                        <svg class="icon-arrow-up">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-up"></use>
+                                        </svg>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>93%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>93%</span>
+                                    </div>
+                                </div>
+                    
+                                <!-- Add more asset items following the same structure above -->
+                    
+                                <div class="assets-table__item">
+                                    <div class="assets-table__favorit">
+                                        <svg class="icon-favorite">
+                                            <use xlink:href="assets/spritemap.svg#icon-favorite"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="assets-table__name">
+                                        <div class="flags assets-table__flags flags">
+                                            <svg class="flag-eur">
+                                                <use xlink:href="assets/flags.svg#flag-eur"></use>
+                                            </svg>
+                                            <svg class="flag-aud">
+                                                <use xlink:href="assets/flags.svg#flag-aud"></use>
+                                            </svg>
+                                        </div>
+                                        <span>EUR/AUD (OTC)</span>
+                                    </div>
+                                    <div class="assets-table__change assets-table__change--up">
+                                        <svg class="icon-arrow-up">
+                                            <use xlink:href="assets/spritemap.svg#icon-arrow-up"></use>
+                                        </svg>
+                                        <span>1.89%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutOne text-center">
+                                        <span>81%</span>
+                                    </div>
+                                    <div class="assets-table__percent payoutTwo">
+                                        <span>80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+         </div>
+                     
+                  <div class="tabs">
+                     <div class="tabs__items">
+                           <div class="tab desktop" id="CHF/JPY" style="left: 0px; z-index: 0;">
+                              <div class="tab__container">
+                                 <div class="tab__flags">
+                                       <svg class="tab__flag flag-chf">
+                                          <use xlink:href="#flag-chf"></use>
+                                       </svg>
+                                       <svg class="tab__flag flag-jpy">
+                                          <use xlink:href="#flag-jpy"></use>
+                                       </svg>
+                                 </div>
+                                 <div class="tab__block">
+                                       <div class="tab__block-label">
+                                          <div class="tab__label">CHF/JPY</div>
+                                       </div>
+                                       <div class="tab__block-payout">
+                                          <div class="tab__payout">20%</div>
+                                       </div>
+                                 </div>
+                              </div>
+                              <div class="tab__close sf-hidden">
+                                 <svg class="icon-close-tiny">
+                                       <use xlink:href="#icon-close-tiny"></use>
+                                 </svg>
+                              </div>
+                              <div class="tab__pin sf-hidden">
+                                 <svg class="icon-pin">
+                                       <use xlink:href="#icon-pin"></use>
+                                 </svg>
+                              </div>
+                           </div>
+                           
+                           <div class="tab desktop active" id="tab-active" style="left: 148px; z-index: 1;">
+                              <div class="tab__container">
+                                 <div class="tab__flags">
+                                       <svg class="tab__flag flag-chf">
+                                          <use xlink:href="#flag-chf"></use>
+                                       </svg>
+                                       <svg class="tab__flag flag-jpy">
+                                          <use xlink:href="#flag-jpy"></use>
+                                       </svg>
+                                 </div>
+                                 <div class="tab__block">
+                                       <div class="tab__block-label">
+                                          <div class="tab__label">CHF/JPY (OTC)</div>
+                                          <div class="tab__label-caret">
+                                             <svg class="icon-caret">
+                                                   <use xlink:href="#icon-caret"></use>
+                                             </svg>
+                                          </div>
+                                       </div>
+                                       <div class="tab__block-payout">
+                                          <div class="tab__payout">80%</div>
+                                       </div>
+                                 </div>
+                              </div>
+                              <div class="tab__close">
+                                 <svg class="icon-close-tiny">
+                                       <use xlink:href="#icon-close-tiny"></use>
+                                 </svg>
+                              </div>
+                              <div class="tab__pin sf-hidden">
+                                 <svg class="icon-pin">
+                                       <use xlink:href="#icon-pin"></use>
+                                 </svg>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="trading-chart__server-time">
+                  <div class="server-time online">00:38:06 <span>UTC+6</span></div>
+               </div>
+
+               <div class="pair-information">
+                  <svg class="icon-pair-information">
+                     <use xlink:href="#icon-pair-information"></use>
+                  </svg>
+                  <div class="pair-information__text">Pair Information</div>
+               </div>
+            </div>
+            <div class="trading-chart__left">
+               <div class="market-depth-vertical">
+                  <div class="market-depth-vertical__ask-value">3%</div>
+                  <div class="market-depth-vertical__ask" style="height: 3%;"></div>
+                  
+                  <div class="market-depth-vertical__bid-value">97%</div>
+                  <div class="market-depth-vertical__bid" style="height: 97%;"></div>
+               </div>
+            </div>
+
+            <div class="trading-chart__button-zoom" style="bottom: 20px;">
+               <div class="trading-chart__button-zoom__icon">
+                  <svg class="icon-minus-zoom">
+                     <symbol fill="none" id="icon-minus-zoom" viewBox="0 0 12 12">
+                           <path d="M7.15385 4.8457H12V7.1534H7.15385H4.84615H0V4.8457H4.84615H7.15385Z" fill="currentColor"></path>
+                     </symbol>
+                     <use xlink:href="#icon-minus-zoom"></use>
+                  </svg>
+               </div>
+               <div class="trading-chart__button-zoom__icon">
+                  <svg class="icon-plus-zoom">
+                     <symbol fill="none" id="icon-plus-zoom" viewBox="0 0 12 12">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M4.84615 0H7.15385V4.84615H12V7.15385H7.15385V12H4.84615V7.15385H0V4.84615H4.84615V0Z" fill="currentColor"></path>
+                     </symbol>
+                     <use xlink:href="#icon-plus-zoom"></use>
+                  </svg>
+               </div>
+            </div>
+            <div class="trading-chart-settings" style="bottom: 30px;">
+               <div class="trading-chart-settings__toggle sf-hidden">
+                  <svg class="icon-ellipsis trading-chart-settings__item-icon">
+                     <use href="assets/icons_2.svg#icon-ellipsis" xlink:href="assets/icons_2.svg#icon-ellipsis"></use>
+                  </svg>
+               </div>
+               <div class="trading-chart-settings__item">
+                  <svg class="icon-pencil trading-chart-settings__item-icon">
+                     <use href="assets/icons_2.svg#icon-pencil" xlink:href="assets/icons_2.svg#icon-pencil"></use>
+                  </svg>
+               </div>
+               <div class="trading-chart-settings__item">1m</div>
+               <div class="trading-chart-settings__item">
+                  <svg class="icon-chart-type-ha trading-chart-settings__item-icon">
+                     <use href="assets/icons_2.svg#icon-chart-type-ha" xlink:href="assets/icons_2.svg#icon-chart-type-ha"></use>
+                  </svg>
+               </div>
+               <div class="trading-chart-settings__item">
+                  <svg class="icon-chart-ruler trading-chart-settings__item-icon">
+                     <use href="assets/icons_2.svg#icon-chart-ruler" xlink:href="assets/icons_2.svg#icon-chart-ruler"></use>
+                  </svg>
+               </div>
+            </div>
+            <div class="trading-chart-settings-mobile-horizontal sf-hidden"></div>
+         </div>
+      </div>
+      <div class="page__sidebar">
+         <div class="sidebar-section sidebar-section--dark sidebar-section--large">
+            <div class="section-deal">
+               <div class="section-deal__header">
+                  <div class="flags section-deal__flags">
+                     <svg class="flag-chf">
+                        <use href="assets/icons_3.svg#flag-chf"></use>
+                     </svg>
+                     <svg class="flag-jpy">
+                        <use href="assets/icons_3.svg#flag-jpy"></use>
+                     </svg>
+                  </div>
+                  <div class="section-deal__name">CHF/JPY (OTC)</div>
+                  <div class="section-deal__percent">80%</div>
+               </div>
+               <div class="trading-chart__mobile-select section-deal__mobile-select sf-hidden">
+                  <svg class="icon-caret trading-chart__mobile-select__caret">
+                     <use href="assets/icons_3.svg#icon-caret"></use>
+                  </svg>
+               </div>
+               <div class="trading-chart__mobile__payout sf-hidden">Your payout: </div>
+               <div class="section-deal__pending">
+                  <svg class="icon-time-setting section-deal__pending-time">
+                     <use href="assets/icons_3.svg#icon-time-setting"></use>
+                  </svg>
+                  <div>pending trade</div>
+                  <div class="input-control input-control--toggle">
+                     <input id="pending-checkbox" class="input-control__checkbox sf-hidden" type="checkbox" value="on">
+                     <span class="input-control__label section-deal__pending-label"></span>
+                  </div>
+               </div>
+               <div class="section-deal__form">
+                  <div class="section-deal__time section-deal__input-black">
+                     <label class="input-control input-control--time input-control--dark section-deal__input-control" for="time-388994428491">
+                        <span class="input-control__label" dir="auto">Time</span>
+                        <span class="input-control__label__switch">Switch time</span>
+                        <button class="input-control__button">-</button>
+                        <input id="time-388994428491" type="text" placeholder="00:00:30" disabled class="input-control__input opacity" value="00:01:00">
+                        <button class="input-control__button">+</button>
+                        <div class="input-control__dropdown">
+                           <!-- Dropdown options -->
+                           <div class="input-control__dropdown-option">00:05</div>
+                           <div class="input-control__dropdown-option">00:10</div>
+                           <!-- Add other options as needed -->
+                        </div>
+                     </label>
+                     <div class="mobile-time-input sf-hidden"></div>
+                  </div>
+                  <div class="section-deal__investment section-deal__input-black">
+                     <div class="input-control-wrapper section-deal--black">
+                        <div class="input-control input-control--number input-control--dark input-control--text-left">
+                           <span class="input-control__label">Investment</span>
+                           <button class="input-control__button" disabled>-</button>
+                           <input type="text" class="input-control__input" value="1 $">
+                           <button class="input-control__button">+</button>
+                           <span class="input-control__label__switch">Switch</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="section-deal__put">
+                  <div class="section-deal__success percent">
+                     <button class="button button--success button--spaced call-btn section-deal__button">
+                        <span>Up</span>
+                        <svg class="icon-arrow-up-circle">
+                           <use href="assets/icons_3.svg#icon-arrow-up-circle"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="section-deal__payout" dir="auto">
+                     <div>Your payout: </div>
+                     <b>1.80 $</b>
+                     <div class="section-deal__percent sf-hidden">80%</div>
+                  </div>
+                  <div class="section-deal__mobile-payout sf-hidden">Payout: </div>
+                  <div class="section-deal__danger">
+                     <button class="button button--danger button--spaced put-btn section-deal__button">
+                        <span>Down</span>
+                        <svg class="icon-arrow-down-circle">
+                           <use href="assets/icons_3.svg#icon-arrow-down-circle"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div class="switch-tooltip sf-hidden" style="top:816px;right:505px">Opening deals by time is currently available only for OTC trading.</div>
+            </div>
+         </div>
+         <div class="deal-list active">
+            <div class="deal-list__tabs">
+               <div class="deal-list__tab active">
+                  <div>Trades</div>
+                  <div class="deal-list__tab-count">0</div>
+               </div>
+               <div class="deal-list__tab">
+                  <svg class="icon-deal-list-orders">
+                     <use href="assets/icons_3.svg#icon-deal-list-orders"></use>
+                  </svg>
+                  <div class="deal-list__tab-count">0</div>
+               </div>
+            </div>
+            <div class="deal-list__items active">
+               <div class="trades__placeholder">
+                  <svg class="icon-trades-empty">
+                     <use href="assets/icons_3.svg#icon-trades-empty"></use>
+                  </svg>
+                  <p>You don't have a trade history yet. You can open a trade using the form above.</p>
+               </div>
+            </div>
+            <div class="deal-list__toggle active">
+               <svg class="icon-arrow-triangle-small-up">
+                  <use href="assets/icons_3.svg#icon-arrow-triangle-small-up"></use>
+               </svg>
+            </div>
+         </div>
+      </div>
+   </main>
+ </div>
+ <div class=app__backdrop></div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="assets/account.js"></script>
+<script type="text/javascript" src="assets/analytics.js"></script>
+<script type="text/javascript" src="assets/app.js"></script>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+   {
+   "autosize": true,
+   "symbol": "CRYPTOCAP:USDT",
+   "interval": "1",
+   "timezone": "Etc/UTC",
+   "theme": "dark",
+   "style": "1",
+   "locale": "en",
+   "allow_symbol_change": true,
+   "calendar": false,
+   "hide_volume": true,
+   "support_host": "https://www.tradingview.com"
+ }
+   </script>
+
+<script type="text/javascript" src="assets/js.js"></script>
+<script type="text/javascript" src="assets/main.js"></script>
+<script type="text/javascript" src="assets/market.js"></script>
+<script type="text/javascript" src="assets/pendingTrades.js"></script>
+<script type="text/javascript" src="assets/tournament.js"></script>
+<script type="text/javascript" src="assets/tournamentDetail.js"></script>
+<script type="text/javascript" src="assets/trades.js"></script>
+<script type="text/javascript" src="assets/transactions.js"></script>
+<script type="text/javascript" src="assets/tv.js"></script>
+<script type="text/javascript" src="assets/index.js"></script>
+<script src="assets/jquery.min.js"></script>
+<script type="text/javascript" src="assets/vcd15cbe7772f49c399c6a5babf22c1241717689176015.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    // Select the button and dropdown by ID to ensure specificity
+    const button = document.getElementById('toggleDropdownButton');
+    const dropdown = document.getElementById('dropdownContent');
+
+    // Toggle dropdown visibility on button click
+    button.addEventListener('click', function(event) {
+        // Prevents event propagation in case of nested elements
+        event.stopPropagation();
+        
+        // Toggle visibility class
+        dropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+   (function () {
+       var messages = {"day":"day","days2":"days","days5":"days"};
+       window.tJSON = window.tJSON || {};
+       for (var i in messages) {
+           if (messages.hasOwnProperty(i)) {
+               window.tJSON[i] = messages[i];
+           }
+       }
+   })();
+</script>
+<!-- <script type="text/javascript" src="assets/vendor.js"></script> -->
+ </html>

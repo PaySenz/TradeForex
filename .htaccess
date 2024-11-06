@@ -1,0 +1,10 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the default file to dashboard.php for the current directory
+DirectoryIndex dashboard.php
+
+# Rewrite requests to hide .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]

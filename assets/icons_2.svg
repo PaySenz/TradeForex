@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol fill="none" id="icon-ellipsis" viewBox="0 0 14 14">
+    <ellipse cx="1.61538" cy="7.00052" rx="1.61538" ry="1.63333" fill="currentColor"></ellipse>
+    <ellipse cx="6.9982" cy="7.00052" rx="1.61538" ry="1.63333" fill="currentColor"></ellipse>
+    <ellipse cx="12.3849" cy="7.00052" rx="1.61538" ry="1.63333" fill="currentColor"></ellipse>
+  </symbol>
+  
+  <symbol fill="none" id="icon-pencil" viewBox="0 0 10 10">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.83917 0.197295C7.10223 -0.0657648 7.52874 -0.0657651 7.7918 0.197295L9.80237 2.20786C10.0654 2.47092 10.0654 2.89743 9.80237 3.16049L9.08464 3.87821C8.82158 4.14127 8.39508 4.14127 8.13202 3.87821L6.12145 1.86765C5.85839 1.60459 5.85839 1.17808 6.12145 0.91502L6.83917 0.197295ZM4.17735 2.85911C4.44041 2.59605 4.86692 2.59605 5.12998 2.85911L7.1409 4.87002C7.40396 5.13308 7.40397 5.55959 7.1409 5.82265L3.16083 9.80271C3.03451 9.92903 2.86317 10 2.68452 10H0.673608C0.301585 10 0 9.69842 0 9.32639V7.31548C0 7.13683 0.0709698 6.96549 0.197295 6.83917L4.17735 2.85911Z" fill="currentColor"></path>
+  </symbol>
+  
+  <symbol id="icon-chart-type-ha" viewBox="0 0 16 16">
+    <rect x="11" width="1" height="16" rx="0.5"></rect>
+    <rect x="9" y="3" width="5" height="10" rx="1"></rect>
+    <rect x="4" y="6" width="1" height="10" rx="0.5"></rect>
+    <rect x="2" y="9" width="5" height="5" rx="1"></rect>
+  </symbol>
+  
+  <symbol id="icon-chart-ruler" viewBox="0 0 16 16">
+    <!-- Insert paths for icon-chart-ruler here -->
+  </symbol>
+</svg>

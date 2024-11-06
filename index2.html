@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Forex Candlestick Chart with Chart.js</title>
+    <!-- Load Chart.js and the Financial Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial@0.1.0"></script>
+    <style>
+        body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #FFFFFF;
+            margin: 0;
+        }
+        #chart_div {
+            width: 90vw;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="chart_div"></canvas>
+    <script>
+        // Forex API details
+        const apiKey = 'bff3fbf39f-09da4c4519-slvm2l';
+        const apiUrl = `https://api.fastforex.io/fetch-one?from=USD&to=BDT&api_key=${apiKey}`;
+
+        // Initialize variables for candlestick data
+        let candlestickData = [];
+        let openPrice, highPrice, lowPrice;
+
+        // Function to fetch live data from the API
+        function fetchLiveData() {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const price = parseFloat(data.result.BDT); // Ensure price is a number
+                    const currentTime = Date.now(); // Timestamp in milliseconds
+
+                    // Initialize open, high, and low prices if undefined
+                    if (openPrice === undefined) {
+                        openPrice = price;
+                        highPrice = price;
+                        lowPrice = price;
+                    }
+
+                    // Update high and low prices within the interval
+                    highPrice = Math.max(highPrice, price);
+                    lowPrice = Math.min(lowPrice, price);
+                    const closePrice = price;
+
+                    // Add new candlestick data
+                    candlestickData.push({ x: currentTime, o: openPrice, h: highPrice, l: lowPrice, c: closePrice });
+
+                    // Limit to the last 20 data points for performance
+                    if (candlestickData.length > 20) {
+                        candlestickData.shift(); // Remove the oldest data point
+                    }
+
+                    // Update chart with the new candlestick
+                    chart.update();
+
+                    // Reset open, high, low for the next candlestick
+                    openPrice = closePrice;
+                    highPrice = closePrice;
+                    lowPrice = closePrice;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // Chart.js initialization
+        const ctx = document.getElementById('chart_div').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'candlestick',
+            data: {
+                datasets: [{
+                    label: 'USD to BDT',
+                    data: candlestickData,
+                    borderColor: 'white',
+                    color: {
+                        up: '#0f9d58',       // Green for rising
+                        down: '#a52714',     // Red for falling
+                        unchanged: 'gray'
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            tooltipFormat: 'll HH:mm:ss',
+                            unit: 'second',
+                            displayFormats: {
+                                second: 'HH:mm:ss'
+                            }
+                        },
+                        ticks: { color: '#FFFFFF' }
+                    },
+                    y: {
+                        beginAtZero: false,
+                        ticks: { color: '#FFFFFF' }
+                    }
+                }
+            }
+        });
+
+        // Fetch live data every second
+        setInterval(fetchLiveData, 1000);
+    </script>
+</body>
+</html>
