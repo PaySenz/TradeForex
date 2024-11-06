@@ -1,0 +1,502 @@
+<!DOCTYPE html><html lang=en class=black>
+<title>Quotex demo account | QxBroker demo</title>
+<meta name=theme-color content=#ffffff>
+<link rel="stylesheet" href="assets/css/style1.css">
+<link rel="stylesheet" href="assets/css/style2.css">
+<link rel="stylesheet" href="assets/css/style8.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<style>
+   /* Adjust sidebar for mobile screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px; /* narrower sidebar */
+    }
+    .sidebar__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+   .hidden {
+    display: none;
+}
+.chart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body {
+    font-size: 1vw;
+}
+
+.card{
+   background-color: #202533;
+   color: white;
+}
+
+.moneyCard {
+   background-color: white;
+   color: black;
+}
+
+.moneyCard:hover {
+   background-color: #424654;
+   color: white;
+}
+
+.moneyCard a {
+   color: black; 
+   text-decoration: none; 
+}
+
+.moneyCard:hover a {
+   color: white; 
+}
+
+
+
+.navbar navbar-expand-lg{
+   background-color: #2b3040;
+   color: white;
+}
+
+.nav-link{
+   color: white;
+   margin-right: 20px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+   color: white;
+   background: #424654;
+   border-radius: 4px;
+}
+
+.nav-link:hover{
+   color: white;
+   background: #424654;
+   border-radius: 4px;
+
+}
+
+.table>:not(caption)>*>* {
+   background-color: #202533;
+   color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 567px) {
+    .header__banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header__banner-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+        height: auto;
+    }
+    .trading-chart {
+        flex-direction: column;
+    }
+}
+@media (max-width: 567px) {
+    .tabs, .asset-select {
+        display: none;
+    }
+    .trading-chart__top, .trading-chart__left {
+        display: none;
+    }
+}
+.button {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+@media (max-width: 567px) {
+    .button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 567px) {
+    .sidebar__footer, .server-time, .pair-information {
+        display: none;
+    }
+}
+
+</style>
+
+<meta name=referrer content=no-referrer>
+
+<style>.sf-hidden{display:none!important}</style>
+
+</head>
+
+<body class=loading>
+    <div id=root>
+        <div class="app app--fixed animate app--sidebar_name-open">
+            <aside class="sidebar app__sidebar">
+                <div>
+                   <svg class="icon-burger-dark sidebar__toggle">
+                      <symbol fill=none id=icon-burger-dark viewBox="0 0 20 16">
+                         <rect width=20 height=1.5 fill=#FFFFFF></rect>
+                         <rect y=7 width=15 height=1.5 fill=#FFFFFF></rect>
+                         <rect y=14 width=20 height=1.5 fill=#FFFFFF></rect>
+                      </symbol>
+                      <use xlink:href=#icon-burger-dark></use>
+                   </svg>
+                </div>
+                <!-- Ensure icons.svg is accessible in the specified path -->
+                <object type="image/svg+xml" data="assets/icons.svg" style="display: none;"></object>
+
+                <nav class="sidebar__buttons">
+                
+                   <a data-text="Trade" class="sidebar__button open-name" href="#">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-trade-sidebar">
+                            <use xlink:href="assets/icons.svg#icon-trade-sidebar"></use>
+                         </svg>
+                         <span>Trade</span>
+                      </div>
+                   </a>
+                
+                   <button class="sidebar__button open-name" data-text="Support">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-help">
+                            <use xlink:href="assets/icons.svg#icon-help"></use>
+                         </svg>
+                         <span>Support</span>
+                      </div>
+                   </button>
+                
+                   <a data-text="Account" class="sidebar__button open-name" href="#">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-profile">
+                            <use xlink:href="assets/icons.svg#icon-profile"></use>
+                         </svg>
+                         <span>Account</span>
+                      </div>
+                   </a>
+                
+                   <a data-text="Tournaments" class="sidebar__button open-name" href="#">
+                      <div class="sidebar__button-icon">
+                         <div class="sidebar__button-icon-tournament">4</div>
+                         <svg class="icon-tournaments">
+                            <use xlink:href="assets/icons.svg#icon-tournaments"></use>
+                         </svg>
+                         <span>Tournaments</span>
+                      </div>
+                   </a>
+                
+                   <a data-text="Market" class="sidebar__button open-name" href="#">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-market">
+                            <use xlink:href="assets/icons.svg#icon-market"></use>
+                         </svg>
+                         <span>Market</span>
+                      </div>
+                   </a>
+                
+                   <button class="sidebar__button open-name" data-text="More">
+                      <div class="sidebar__button-icon">
+                         <svg class="icon-more-sidebar">
+                            <use xlink:href="assets/icons.svg#icon-more-sidebar"></use>
+                         </svg>
+                         <span>More</span>
+                      </div>
+                   </button>
+                
+                </nav>
+                <div class="sidebar__usermenu sf-hidden"></div>
+                <div class="sidebar__footer sidebar__footer--closed">
+                  <div class="sidebar__settings-block">
+                     <!-- Fullscreen Settings Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-settings-full-screen">
+                           <use xlink:href="assets/fullscreen-icons.svg#icon-settings-full-screen"></use>
+                        </svg>
+                     </button>
+                     
+                     <!-- Sidebar Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-left-sidebar">
+                           <use xlink:href="assets/sidebar-icons.svg#icon-left-sidebar"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  
+                  <!-- Load Settings Icons SVG Sprite -->
+                  <object type="image/svg+xml" data="assets/settings-icons.svg" style="display: none;"></object>
+                  
+                  <div class="sidebar__settings">
+                     <!-- General Settings Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-settings">
+                           <use xlink:href="assets/settings-icons.svg#icon-settings"></use>
+                        </svg>
+                     </button>
+                     
+                     <!-- Sound Settings Button -->
+                     <button class="sidebar__settings-button">
+                        <svg class="icon-settings-sound">
+                           <use xlink:href="assets/settings-icons.svg#icon-settings-sound"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  
+                  <!-- Load Social Media Icons SVG Sprite -->
+                  <object type="image/svg+xml" data="assets/social-icons.svg" style="display: none;"></object>
+                  
+                  <!-- Social Media Button -->
+                  <button class="sidebar__social-media">
+                     <svg width="28" height="28" viewBox="0 0 28 28" class="icon-social-media">
+                        <use xlink:href="assets/social-icons.svg#icon-social-media"></use>
+                     </svg>
+                     Join us
+                  </button>
+                  
+                  <div class="sidebar__livechat">
+                     <a class="sidebar__livechat-status online" href="#">Help</a>
+                  </div>
+               </div>
+                <div class="sidebar__footer sidebar__footer--open sf-hidden" dir=auto></div>
+             </aside>
+            <aside class="sidepanel app__sidepanel sidepanel__bg-black"></aside>
+
+<div class="page app__page">
+   <header class="header page__header">
+      <div class=header__brand>
+         <!-- HTML file linking to the external SVG -->
+         <!-- HTML file linking to the external SVG -->
+         <a class="header__logo" href="#">
+            <svg class="icon-logo-dark">
+                  <use xlink:href="assets/icon-logo-dark.svg#icon-logo-dark"></use>
+            </svg>
+         </a>
+         <div class=header__slogan>Web Trading Platform</div>
+      </div>
+      <div class="header__mobile-menu sf-hidden"></div>
+      <div class=header__banner>
+         <img class=header__banner-bg src="assets/banner.png" alt="Banner bg">
+
+         <a class=header__banner-container href="#">
+            <img class=header__banner-icon src="assets/rocket.png" alt="Banner icon">
+            <span>Get a 30% bonus on your first deposit</span>
+            <div class=header__banner-percents>30%</div>
+         </a>
+      </div>
+
+      <div class="trading-chart__mobile-select sf-hidden">
+         <svg class="icon-caret trading-chart__mobile-select__caret">
+            <symbol fill=none id=icon-caret viewBox="0 0 9 6">
+               <path d="M1.08341 0.679043C0.83589 0.440319 0.443217 0.440319 0.195695 0.679043C-0.0690109 0.93434 -0.063765 1.35935 0.20285 1.60115L4.05975 5.32096C4.18042 5.43734 4.34284 5.5 4.5036 5.5C4.6698 5.5 4.82584 5.43826 4.94746 5.32096L8.80436 1.60115C9.06521 1.34957 9.06521 0.930626 8.80436 0.679043C8.55684 0.440319 8.16416 0.440319 7.91664 0.679043L4.49668 3.97745L1.08341 0.679043Z" fill=currentColor></path>
+            </symbol>
+            <use xlink:href=#icon-caret></use>
+         </svg>
+      </div>
+      <div class="trading-chart__mobile__payout sf-hidden">Your payout: </div>
+      <div class="header-notifications header-notifications-mobile sf-hidden"></div>
+      <div class="usermenu usermenu-mobile sf-hidden"></div>
+      <div class="header__container">
+         <div class="header-notifications">
+            <div class="header-notifications__button">
+               <svg class="icon-notification header-notifications__icon">
+                  <use xlink:href="icons-header.svg#icon-notification"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="usermenu">
+            <div class="usermenu__info">
+               <div class="usermenu__info-levels">
+                  <svg class="icon-profile-level-standart">
+                     <use xlink:href="icons-header.svg#icon-profile-level-standart"></use>
+                  </svg>
+               </div>
+               <div class="usermenu__info-wrapper"></div>
+               <div class="usermenu__info-text">
+                  <div class="usermenu__info-name">Demo Account</div>
+                  <div class="usermenu__info-balance">$10,000.00</div>
+               </div>
+               <div class="usermenu__info-caret">
+                  <svg class="icon-caret">
+                     <use xlink:href="icons-header.svg#icon-caret"></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <div class="header__sidebar">
+            <a class="button button--success button--small header__sidebar-button deposit" href="#">
+               <div class="button__icon">
+                  <svg class="icon-plus">
+                     <use xlink:href="icons-header.svg#icon-plus"></use>
+                  </svg>
+               </div>
+               <span>Deposit</span>
+            </a>
+            <a class="button button--small header__sidebar-button hide-md-down" href="#">Withdrawal</a>
+         </div>
+      </div>
+   </header>
+   <main class=page__body>
+      <div class=page__content>
+         
+<div class="card p-3">
+   <div class="card-body">
+
+   
+ <!-- Main Content -->
+ <div class="col-md-12">
+   <!-- Tabs -->
+
+   <nav class="navbar navbar-expand-lg shadow">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link " aria-current="page" href="deposit.html">Deposit</a>
+            <a class="nav-link" href="#">Withdrawal</a>
+            <a class="nav-link" href="transaction.html">Transactions</a>
+            <a class="nav-link active" href="trade_trade_history.html">Trades</a>
+            <a class="nav-link" href="#">Account</a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+   <div class="container mt-4">
+      <!-- Tab Navigation -->
+      <ul class="nav nav-tabs">
+         <li class="nav-item">
+             <a class="nav-link" href="trade_trade_history.html">Trade History</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link active" href="trade_pending_trades.html">Pending Trades</a>
+         </li>
+     </ul>
+  
+     <div class="row align-items-center mt-4">
+        
+      <!-- From Date Field -->
+      <div class="mb-3 col-lg-2">
+          <label for="from" class="form-label">From:</label>
+          <input type="date" id="from" class="form-control" placeholder="6/11/23">
+      </div>
+
+      <!-- To Date Field -->
+      <div class="mb-3 col-lg-2">
+          <label for="to" class="form-label">To:</label>
+          <input type="date" id="to" class="form-control" placeholder="6/11/24">
+      </div>
+
+      <!-- Account Type Dropdown -->
+      <div class="mb-3 col-lg-3">
+          <label for="accountType" class="form-label">Account Type:</label>
+          <select id="accountType" class="form-select">
+              <option selected>Live Account</option>
+              <option>Demo Account</option>
+          </select>
+      </div>
+
+      <!-- Apply Filters Button -->
+      <div class="mb-3 col-lg-2 my-auto">
+          <button type="submit" class="btn btn-light">Apply Filters <i class="fa fa-check" aria-hidden="true"></i></button>
+      </div>
+      
+      <!-- Export To Dropdown -->
+      <div class="mb-3 col-lg-3">
+          <label for="export" class="form-label">Export To:</label>
+          <select id="export" class="form-select">
+              <option selected>XLSX</option>
+              <option>CSV</option>
+          </select>
+      </div>
+
+  </div>
+
+      <table class="table mt-3">
+         <thead>
+           <tr>
+             <th scope="col">Asset</th>
+             <th scope="col">Info</th>
+             <th scope="col">Chart</th>
+             <th scope="col">Opening Quote</th>
+             <th scope="col">Closing Quote</th>
+             <th scope="col">IP</th>
+             <th scope="col">Amount</th>
+             <th scope="col">Income</th>
+
+
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>AUD/CHEF (OTC)</td>
+             <td>85% <br> 0.12345678</td>
+             <td></td>
+             <td>0.56548 <br> 2024-11-06 23:49:45</td>
+             <td>0.56516 <br> 2024-11-06 23:50:45</td>
+             <td>-</td>
+             <td style="color: green;"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i> 1.00 $</td>
+             <td style="color: red;"></i> 0.00 $</td>
+
+
+
+
+           </tr>
+         
+         </tbody>
+       </table>
+
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+            
+         </div>
+      </div>
+      
+
+
+
+
+
+   </main>
+ </div>
+ <div class=app__backdrop></div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ </body>
+ </html>
