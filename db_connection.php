@@ -3,9 +3,9 @@
 
 // Database connection parameters
 $host = 'localhost';       // Database host
-$db = 'trading';     // Database name
-$user = 'doller';   // Database username
-$pass = '$#Iraji12120';   // Database password
+$db = '';     // Database name
+$user = '';   // Database username
+$pass = '';   // Database password
 
 try {
     // Create a new PDO instance and set error mode to exception
